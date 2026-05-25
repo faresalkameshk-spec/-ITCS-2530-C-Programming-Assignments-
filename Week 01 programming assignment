@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    // Declare variables to store user input
+    int yearsPlaying;
+    int hoursPerWeek;
+    int totalHours;
+    string favoriteSong;
+
+    // Ask the user for input
+    cout << "How many years have you been playing the trumpet? ";
+    cin >> yearsPlaying;
+
+    cout << "How many hours per week do you practice? ";
+    cin >> hoursPerWeek;
+
+    cout << "What is your favorite song to play on the trumpet? ";
+    cin.ignore();
+    getline(cin, favoriteSong);
+
+    // Calculate total hours played
+    totalHours = yearsPlaying * hoursPerWeek * 52;
+
+    // Output a summary paragraph using all inputs
+    cout << "\nYou have been playing the trumpet for " << yearsPlaying << " years. ";
+    cout << "You practice about " << hoursPerWeek << " hours per week. ";
+    cout << "Your favorite song to play is \"" << favoriteSong << "\". ";
+    cout << "That means you have spent about " << totalHours << " hours playing trumpet in your life!" << endl;
+
+    return 0;
+}
